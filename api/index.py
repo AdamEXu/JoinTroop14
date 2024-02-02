@@ -30,9 +30,9 @@ def join14():
 def join():
   return redirect("https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-031taa0014")
 
-@app.route('/calendar')
+@app.route('/cal')
 def calendar():
-  return "soon™"
+  return "calendar soon™"
 
 @app.errorhandler(404)
 def error404(e):
