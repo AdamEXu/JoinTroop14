@@ -30,5 +30,19 @@ def join14():
 def join():
   return redirect("https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-031taa0014")
 
+@app.route('/calendar')
+def calendar():
+  return "soon™"
+
+@app.errorhandler(404)
+def error404(e):
+  return redirect('/404?page=' + request.path)
+
+@app.route('/404')
+def error404page():
+  if request.args.get("page") == None:
+    return "<html><head>Not Found!</head><body><h1>Uh oh!</h1><p>That page doesn't exist anymore, never existed, or will exist soon (if that made sense).</p></body></html>"
+  return f"<html><head>Not Found!</head><body><h1>Uh oh!</h1><p>The URL troop14.vercel.app/{request.args.get('page')} doesn't exist anymore, never existed, or will exist soon (if that made sense).</p></body></html>"
+
 if __name__ == '__main__':
   app.run(debug=True, host='0.0.0.0', port=3000)
