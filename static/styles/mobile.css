@@ -1,0 +1,78 @@
+@media only screen and (max-width: 520px) {
+  body p {
+    font-size: 24px;
+  }
+  
+  nav h1 {
+    font-size: 48px;
+  }
+
+  .xclosebtn {
+    width: 40px;
+    height: 40px;
+    left: calc(100% - 48px);
+  }
+
+  .xclosebtn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sidebarright {
+    left: -100vw;
+    width: 100vw;
+  }
+
+  .sidebaractive {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .banner {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .headerlinks {
+    display: none;
+  }
+  .mobilemenu {
+    display: block;
+  }
+  #bsaicon {
+    display: none;
+  }
+  #paloaltoicon {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 959px) {
+  #moveeverythingbelownavbar {
+    height: 96px;
+  }
+
+  #wide14 {
+    display: none;
+  }
+
+  nav {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);
+  }
+  
+  #minijoin14 {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .headerlinks {
+    display: block;
+  }
+  .mobilemenu {
+    display: none;
+  }
+}

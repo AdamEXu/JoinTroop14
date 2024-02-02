@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BSA Troop 14</title>
+  <meta content="Title. Embed." property="og:title" />
+  <meta content="Description. Very." property="og:description" />
+  <meta content="https://adamxu.net" property="og:url" />
+  <meta content="/static/resources/paloalto.png" property="og:image" />
+  <!-- <meta content="#ff0000" data-react-helmet="true" name="theme-color" /> -->
+  <!-- <meta name="twitter:card" content="summary_large_image"> -->
+  <link rel="stylesheet" href="/static/styles/style.css">
+  <link rel="stylesheet" href="/static/styles/mobile.css">
+  <link rel="icon" href="/static/resources/paloalto.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <script src="/static/scripts/darkmode.js"></script>
+  <script src="/static/scripts/index.js"></script>
+</head>
+
+<body onload="onload()">
+  <nav>
+    <div class="navleft">
+      <a onclick="opensidebar()" class="mobilemenu">
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" height="48px">
+        <style>
+          path {
+            fill: black;
+          }
+          @media (prefers-color-scheme: dark) {
+            path { fill: white; }
+          }
+        </style>
+        <path d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"/>
+      </svg>
+      </a>
+      <div class="headerlinks">
+        <span class="headerlink ultrabold"><a href="/">Home</a></span>
+        <span class="headerlink"><a href="/about">About</a></span>
+        <span class="headerlink"><a href="/parents">Parents</a></span>
+        <span class="headerlink underlined" id="selectedlink"><a href="/splmessage">SPL Message</a></span>
+        <span class="headerlink"><a href="/faq">FAQ</a></span>
+        <span class="headerlink"><a href="/cal">Calendar</a></span>
+      </div>
+    </div>
+    <div class="navright">
+      <img src="/static/resources/paloalto.png" id="paloaltoicon"">
+      <img src="/static/resources/bsalogo.png" id="bsaicon"">
+      <a href="/join14" target="_blank"><button id="minijoin14" class="selected">Join T14</button></a>
+    </div>
+  </nav>
+  <join14 id="wide14">
+    <h3>Join Troop 14 Today!</h2>
+    <div class="navright">
+      <a href="/join14" target="_blank"><button class="selected">Join</button></a>
+    </div>
+  </join14>
+  <div class="moveeverythingbelownavbar" id="moveeverythingbelownavbar" onload="mobileoptimize();"></div>
+  <script>setthemetoos()</script>
+
+  
+  <h1>SPL Message</h1>
+  <p>Wouldn't it be cool... if Miles could write a message?</p>
+
+  
+  <br><br>
+  <div class="overlaydark" id="overlaydark" onclick="returntoindex()"></div>
+  <div class="sidebarright" id="sidebarright">
+    <div class="mobilepush"></div>
+    <a href="/"><button class="homebtn">Home</button></a>
+    <a href="/about"><button>About</button></a>
+    <a href="/parents"><button>Parents</button></a>
+    <a href="/splmessage"><button class="selected">SPL Message</button></a>
+    <a href="/faq"><button>FAQ</button></a>
+    <a href="/cal"><button>Calendar</button></a>
+  </div>
+        <button class="xclosebtn" id="xclosebtn" onclick="returntoindex()">
+          <img id="xcloseicon" src="/static/resources/close.png">
+        </button>
+        </body">
+        <script>openpageonreload();</script>
+
+</html>
