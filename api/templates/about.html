@@ -1,118 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "template.html" %}
+{% block content %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BSA Troop 14</title>
-  <meta content="Title. Embed." property="og:title" />
-  <meta content="Description. Very." property="og:description" />
-  <meta content="https://adamxu.net" property="og:url" />
-  <meta content="/static/resources/paloalto.png" property="og:image" />
-  <!-- <meta content="#ff0000" data-react-helmet="true" name="theme-color" /> -->
-  <!-- <meta name="twitter:card" content="summary_large_image"> -->
-  <link rel="stylesheet" href="/static/styles/style.css">
-  <link rel="stylesheet" href="/static/styles/mobile.css">
-  <link rel="icon" href="/static/resources/paloalto.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <script src="/static/scripts/darkmode.js"></script>
-  <script src="/static/scripts/index.js"></script>
-</head>
+<h1>About Troop 14</h1>
+<h2>Philosophy</h2>
+<p>Troop 14 and Troop 4014 are scout-led organizations. Unlike most youth organizations, the youth themselves
+  actually run the Troop. This ranges everywhere from running the meetings to training other Scouts, from
+  choosing an outing program to organizing the food purchases and the cooking for an outing.</p>
+<p>That’s not to say that the scouts are entirely on their own. There are, in fact, two different kinds of adult
+  assistance and support available to the Scouts: the Scouters (Scoutmaster and Assistant Scoutmasters), and the
+  parents at-large. The primary role of the Scouters is to ensure safety, and to provide guidance and mentorship
+  for the Scouts.</p>
+<h2>Our History</h2>
+<p>This troop was established in 1959 and we have held our troop meetings at Covenant Presbyterian Church since
+  it was established. We currently have about 50 scouts in our two troops.</p>
+<h2>Outings</h2>
+<p>Troops 14/4014 take numerous outings each year. The typical schedule from September through June is to take
+  one or two outings each month: one day trip, and one overnight. Generally, all Scouts are welcome on all
+  trips; a few trips—longer, more difficult adventures—may have age, rank, or experience-based requirements.</p>
+<p>Participation in Troop outings is optional, though strongly encouraged. Going on Troop outings is a very big
+  part of Scouting. Besides learning skills that are important in the Scouting program, joining the Troop on
+  outings instills in Scouts a better appreciation of the outdoors, nature, and the environment. It also
+  provides critical opportunities for Scouts to get to know other Scouts in the Troop and to work together with
+  them as a team.</p>
+<p>In addition to Troop outings, each patrol may take one or two outings on its own over the course of the year.
+</p>
+<h2>Camp Oljato</h2>
+<p>Troop 14 traditionally heads up to Camp Oljato each summer. Oljato, run by the Pacific Skyline Council,
+  provides Scouts with opportunities to enjoy the outdoors, experience organized Scout camping, and work on
+  advancement (both Scoutcraft skills and Merit Badges). The Troop usually attends Oljato for a week in July.
+</p>
+<p>The Troop also attends an additional camp that varies from year to year.</p>
+<h2>High Adventure Camps</h2>
+<p>The Boy Scouts of America runs three high adventure camps: camps that provide a longer or somewhat unusual
+  camping experience. These camps—Philmont, Northern Tier, and the Florida Sea Base—give Scouts fourteen and
+  older three highly varied options for a summer’s adventure.</p>
+<p>More information about each of these high adventure camps is available on the Web.</p>
+<p><b>Philmont</b>: Extended wilderness treks in the Sangre de Cristo mountains of New Mexico.</p>
+<p><b>Northern Tier</b>: Wilderness canoe trips in northern Minnesota, Ontario, and Manitoba.</p>
+<p><b>Florida Sea Base</b>: Maritime high adventure, including tall ship sailing, scuba, sea kayaking, etc</p>
 
-<body onload="onload()">
-  <nav>
-    <div class="navleft">
-      <a onclick="opensidebar()" class="mobilemenu">
-        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" height="48px">
-        <style>
-          path {
-            fill: black;
-          }
-          @media (prefers-color-scheme: dark) {
-            path { fill: white; }
-          }
-        </style>
-        <path d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"/>
-      </svg>
-      </a>
-      <div class="headerlinks">
-        <span class="headerlink ultrabold"><a href="/">Home</a></span>
-        <span class="headerlink underlined" id="selectedlink"><a href="/about">About</a></span>
-        <span class="headerlink"><a href="/parents">Parents</a></span>
-        <span class="headerlink"><a href="/splmessage">SPL Message</a></span>
-        <span class="headerlink"><a href="/faq">FAQ</a></span>
-        <span class="headerlink"><a href="/cal">Calendar</a></span>
-      </div>
-    </div>
-    <div class="navright">
-      <img src="/static/resources/paloalto.png" id="paloaltoicon">
-      <img src="/static/resources/bsalogo.png" id="bsaicon">
-      <a href="/join14" target="_blank"><button id="minijoin14" class="selected">Join T14</button></a>
-    </div>
-  </nav>
-  <a href="/join14" target="_blank">
-    <join14 id="wide14">
-      <h3>Join Troop 14 Today!</h2>
-    </join14>
-  </a>
-        <div class="moveeverythingbelownavbar" id="moveeverythingbelownavbar" onload="mobileoptimize();"></div>
-        <script>setthemetoos()</script>
-
-        <h1>About Troop 14</h1>
-        <h2>Philosophy</h2>
-        <p>Troop 14 and Troop 4014 are scout-led organizations. Unlike most youth organizations, the youth themselves
-          actually run the Troop. This ranges everywhere from running the meetings to training other Scouts, from
-          choosing an outing program to organizing the food purchases and the cooking for an outing.</p>
-        <p>That’s not to say that the scouts are entirely on their own. There are, in fact, two different kinds of adult
-          assistance and support available to the Scouts: the Scouters (Scoutmaster and Assistant Scoutmasters), and the
-          parents at-large. The primary role of the Scouters is to ensure safety, and to provide guidance and mentorship
-          for the Scouts.</p>
-        <h2>Our History</h2>
-        <p>This troop was established in 1959 and we have held our troop meetings at Covenant Presbyterian Church since
-          it was established. We currently have about 50 scouts in our two troops.</p>
-        <h2>Outings</h2>
-        <p>Troops 14/4014 take numerous outings each year. The typical schedule from September through June is to take
-          one or two outings each month: one day trip, and one overnight. Generally, all Scouts are welcome on all
-          trips; a few trips—longer, more difficult adventures—may have age, rank, or experience-based requirements.</p>
-        <p>Participation in Troop outings is optional, though strongly encouraged. Going on Troop outings is a very big
-          part of Scouting. Besides learning skills that are important in the Scouting program, joining the Troop on
-          outings instills in Scouts a better appreciation of the outdoors, nature, and the environment. It also
-          provides critical opportunities for Scouts to get to know other Scouts in the Troop and to work together with
-          them as a team.</p>
-        <p>In addition to Troop outings, each patrol may take one or two outings on its own over the course of the year.
-        </p>
-        <h2>Camp Oljato</h2>
-        <p>Troop 14 traditionally heads up to Camp Oljato each summer. Oljato, run by the Pacific Skyline Council,
-          provides Scouts with opportunities to enjoy the outdoors, experience organized Scout camping, and work on
-          advancement (both Scoutcraft skills and Merit Badges). The Troop usually attends Oljato for a week in July.
-        </p>
-        <p>The Troop also attends an additional camp that varies from year to year.</p>
-        <h2>High Adventure Camps</h2>
-        <p>The Boy Scouts of America runs three high adventure camps: camps that provide a longer or somewhat unusual
-          camping experience. These camps—Philmont, Northern Tier, and the Florida Sea Base—give Scouts fourteen and
-          older three highly varied options for a summer’s adventure.</p>
-        <p>More information about each of these high adventure camps is available on the Web.</p>
-        <p><b>Philmont</b>: Extended wilderness treks in the Sangre de Cristo mountains of New Mexico.</p>
-        <p><b>Northern Tier</b>: Wilderness canoe trips in northern Minnesota, Ontario, and Manitoba.</p>
-        <p><b>Florida Sea Base</b>: Maritime high adventure, including tall ship sailing, scuba, sea kayaking, etc</p>
-
-  <br><br>
-  
-        <div class="overlaydark" id="overlaydark" onclick="returntoindex()"></div>
-  <div class="sidebarright" id="sidebarright">
-    <div class="mobilepush"></div>
-    <a href="/"><button class="homebtn">Home</button></a>
-    <a href="/about"><button class="selected">About</button></a>
-    <a href="/parents"><button>Parents</button></a>
-    <a href="/splmessage"><button>SPL Message</button></a>
-    <a href="/faq"><button>FAQ</button></a>
-    <a href="/cal"><button>Calendar</button></a>
-  </div>
-        <button class="xclosebtn" id="xclosebtn" onclick="returntoindex()">
-          <img id="xcloseicon" src="/static/resources/close.png">
-        </button>
-        </body">
-        <script>openpageonreload();</script>
-
-</html>
+{% endblock %}

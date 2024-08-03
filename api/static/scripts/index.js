@@ -48,3 +48,11 @@ function openmenu(contentid) {
   content = document.getElementById(contentid);
   content.classList.toggle("active")
 }
+
+function togglebigmode() {
+  if (document.body.style.zoom == "100%") {
+    document.body.style.zoom = "200%";
+  } else {
+    document.body.style.zoom = "100%";
+  }
+}
