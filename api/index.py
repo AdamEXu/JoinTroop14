@@ -28,7 +28,7 @@ def join14():
 
 @app.route('/join')
 def join():
-  return redirect("https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-031taa0014")
+  return redirect("http://join.troop14pa.org/")
 
 @app.route('/cal')
 def calendar():
@@ -41,7 +41,7 @@ def error404(e):
 @app.route('/404')
 def error404page():
   if request.args.get("page") == None:
-    return "<html><head><title>Not Found!</title></head><body><h1>Uh oh!</h1><p>That page doesn't exist anymore, never existed, or will exist soon (if that made sense).</p></body></html>"
+    return "<html><head><title>Not Found!</title></head><body><h1>Uh oh!</h1><p>That page doesn't exist anymore, never existed, or will exist soon (if that made sense). By the way, are you intentionally trying to find this 404 page?</p></body></html>"
   return f"<html><head><title>Not Found!</title></head><body><h1>Uh oh!</h1><p>The URL troop14.vercel.app{request.args.get('page')} doesn't exist anymore, never existed, or will exist soon (if that made sense).</p></body></html>"
 
 if __name__ == '__main__':

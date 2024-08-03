@@ -28,12 +28,6 @@
   }
 }
 
-@media only screen and (max-width: 720px) {
-  .banner {
-    height: 200px;
-  }
-}
-
 @media only screen and (max-width: 1060px) {
   .headerlinks {
     display: none;
