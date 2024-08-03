@@ -520,3 +520,10 @@ li {
   font-size: 30px;
   margin-bottom: 16px;
 }
+
+small {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1vw;
+}

@@ -2,9 +2,9 @@
 {% block content %}
 
 <h1>Calendar</h1>
-<p>Please see the below Google calendar for Troop 14 meetings, events, campouts, etc.. You can also subscribe to the calendar to view it on your own digital calendar platform for your convenience.</p>
-<a href="/calendar-ical" target="_blank"><button class="selected" style="width: 90%; margin-left: 5%;">Add this to my calendar</button></a>
+<p>Please see the below calendar for Troop 14 meetings, events, campouts, etc.. You can also add the calendar to your digital calendar client for convenience.</p>
+<a href="/calendar-ical" target="_blank"><button style="width: 90%; margin-left: 5%;">Add this to my calendar (iCal)</button></a>
 
-<iframe src="https://calendar.google.com/calendar/embed?src=troop14boyscouts@gmail.com&ctz=America%2FLos_Angeles" style="border: 0" frameborder="0" scrolling="no" onload="this.width=screen.width;this.height=screen.height;"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?src=troop14boyscouts@gmail.com&ctz=America%2FLos_Angeles" style="border: 0" frameborder="0" scrolling="no" onload="this.width=window.innerWidth;this.height=window.innerHeight;" id="calendariframe"></iframe>
 
 {% endblock %}

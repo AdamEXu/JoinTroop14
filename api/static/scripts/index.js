@@ -9,6 +9,8 @@ function returntoindex() {
 
 function onload() {
   setthemetoos();
+  document.getElementById("calendariframe").width=window.innerWidth;
+  document.getElementById("calendariframe").height=window.innerHeight;
 }
 
 function opensidebar() {
