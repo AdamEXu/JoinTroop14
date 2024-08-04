@@ -1,107 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "template.html" %}
+{% block content %}
 
-    <!-- Primary Meta Tags -->
-    <title>CSS Impossible Carousel | HTML & CSS Only</title>
-    <meta name="author" content="Developer Zahid | Zahid Hasan Munna">
-    <meta name="title" content="CSS Impossible Carousel | HTML & CSS Only">
-    <meta name="description" content="This is a HTML & CSS based carousel. When a user click on previous and next slide images, then carousel going to start manually.">
-    <meta name="keywords" content="CSS carousel, HTML carousel, Impossible carousel, CSS animations, CSS transitions, HTML animations, HTML transitions, Web design, Front-end development, User interface, User experience, css, CSS, css3, CSS3, frontend developer, frontend designer, web designer, developer, designer, dev-z">
+<style>
+  .gallery-cell img {
+    height: calc(100vh - 300px);
+    width: auto;
+  }
+</style>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://css-impossible-carousel.netlify.app/">
-    <meta property="og:title" content="CSS Impossible Carousel | HTML & CSS Only">
-    <meta property="og:description" content="This is a HTML & CSS based carousel. When a user click on previous and next slide images, then carousel going to start manually.">
-    <meta property="og:image" content="https://css-impossible-carousel.netlify.app/assets/images/og/og-image.jpg">
+<h1>Photos</h1>
+<p>Here is a selection of photos from our various outings.</p>
+<p><b>Due to the number of images, this page may take a while to load.</b></p>
+<p>Computer: use arrow keys or the arrow buttons on the left/right side of the screen to navigate. Mobile: swipe to navigate. There are buttons at the bottom of the page to quickly navigate through images.</p>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://css-impossible-carousel.netlify.app/">
-    <meta property="twitter:title" content="CSS Impossible Carousel | HTML & CSS Only">
-    <meta property="twitter:description" content="This is a HTML & CSS based carousel. When a user click on previous and next slide images, then carousel going to start manually.">
-    <meta property="twitter:image" content="https://css-impossible-carousel.netlify.app/assets/images/og/og-image.jpg">
-
-    <!-- Favicon Link -->
-    <link rel="icon" type="image/png" sizes="512x512" href="./assets/images/favicon/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon/android-chrome-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon/favicon.ico">
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    <!-- <input type="radio" name="slider" id="slider--1" checked>
-    <input type="radio" name="slider" id="slider--2">
-    <input type="radio" name="slider" id="slider--3">
-    <input type="radio" name="slider" id="slider--4">
-    <input type="radio" name="slider" id="slider--5">
-    <input type="radio" name="slider" id="slider--6">
-    <input type="radio" name="slider" id="slider--7">
-    <input type="radio" name="slider" id="slider--8">
-    <input type="radio" name="slider" id="slider--9">
-    <input type="radio" name="slider" id="slider--10"> -->
-    <!-- use jinja, photo urls are in the photos variable -->
-    {% for photo in photos %}
-    
-    {% endfor %}
-    
-
-    <label class="slider-item" for="slider--1" style="--index: 1;" title="Slide 1">
-        <img src="https://source.unsplash.com/random/300x400/?architecture&1" class="slider-item__image" width="300" height="400" loading="lazy" draggable="false" alt="architecture">
-        <h1 class="slider-item__number">01</h1>
-        <h2 class="slider-item__text">Place Name</h2>
-    </label>
-    <label class="slider-item" for="slider--2" style="--index: 2;" title="Slide 2">
-        <img src="https://source.unsplash.com/random/300x400/?architecture&2" class="slider-item__image" width="300" height="400" loading="lazy" draggable="false" alt="architecture">
-        <h1 class="slider-item__number">02</h1>
-        <h2 class="slider-item__text">Place Name</h2>
-    </label>
-    <label class="slider-item" for="slider--3" style="--index: 3;" title="Slide 3">
-        <img src="https://source.unsplash.com/random/300x400/?architecture&3" class="slider-item__image" width="300" height="400" loading="lazy" draggable="false" alt="architecture">
-        <h1 class="slider-item__number">03</h1>
-        <h2 class="slider-item__text">Place Name</h2>
-    </label>
-    <label class="slider-item" for="slider--4" style="--index: 4;" title="Slide 4">
-        <img src="https://source.unsplash.com/random/300x400/?architecture&4" class="slider-item__image" width="300" height="400" loading="lazy" draggable="false" alt="architecture">
-        <h1 class="slider-item__number">04</h1>
-        <h2 class="slider-item__text">Place Name</h2>
-    </label>
-    <label class="slider-item" for="slider--5" style="--index: 5;" title="Slide 5">
-        <img src="https://source.unsplash.com/random/300x400/?architecture&5" class="slider-item__image" width="300" height="400" loading="lazy" draggable="false" alt="architecture">
-        <h1 class="slider-item__number">05</h1>
-        <h2 class="slider-item__text">Place Name</h2>
-    </label>
-    <label class="slider-item" for="slider--6" style="--index: 6;" title="Slide 6">
-        <img src="https://source.unsplash.com/random/300x400/?architecture&6" class="slider-item__image" width="300" height="400" loading="lazy" draggable="false" alt="architecture">
-        <h1 class="slider-item__number">06</h1>
-        <h2 class="slider-item__text">Place Name</h2>
-    </label>
-    <label class="slider-item" for="slider--7" style="--index: 7;" title="Slide 7">
-        <img src="https://source.unsplash.com/random/300x400/?architecture&7" class="slider-item__image" width="300" height="400" loading="lazy" draggable="false" alt="architecture">
-        <h1 class="slider-item__number">07</h1>
-        <h2 class="slider-item__text">Place Name</h2>
-    </label>
-    <label class="slider-item" for="slider--8" style="--index: 8;" title="Slide 8">
-        <img src="https://source.unsplash.com/random/300x400/?architecture&8" class="slider-item__image" width="300" height="400" loading="lazy" draggable="false" alt="architecture">
-        <h1 class="slider-item__number">08</h1>
-        <h2 class="slider-item__text">Place Name</h2>
-    </label>
-    <label class="slider-item" for="slider--9" style="--index: 9;" title="Slide 9">
-        <img src="https://source.unsplash.com/random/300x400/?architecture&9" class="slider-item__image" width="300" height="400" loading="lazy" draggable="false" alt="architecture">
-        <h1 class="slider-item__number">09</h1>
-        <h2 class="slider-item__text">Place Name</h2>
-    </label>
-    <label class="slider-item" for="slider--10" style="--index: 10;" title="Slide 10">
-        <img src="https://source.unsplash.com/random/300x400/?architecture&10" class="slider-item__image" width="300" height="400" loading="lazy" draggable="false" alt="architecture">
-        <h1 class="slider-item__number">10</h1>
-        <h2 class="slider-item__text">Place Name</h2>
-    </label>
-</body>
-</html>
+<div class="main-gallery">
+  {% for photo in photos %}
+  <div class="gallery-cell">
+    <img src="{{ photo.url }}" alt="{{ photo.alt }}">
+  </div>
+  {% endfor %}
+</div>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+  var flkty = new Flickity( '.main-gallery', {
+    // options
+    cellAlign: 'center',
+    contain: true
+  });
+</script>
+{% endblock %}

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/static/styles/mobile.css">
   <link rel="icon" href="/static/resources/paloalto.png" type="image/x-icon">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <script src="/static/scripts/darkmode.js"></script>
   <script src="/static/scripts/index.js"></script>
 </head>
@@ -73,6 +74,7 @@
     <a href="/splmessage"><button class="{{ 'selected' if active_page == 'splmessage' else '' }}">SPL Message</button></a>
     <a href="/faq"><button class="{{ 'selected' if active_page == 'faq' else '' }}">FAQ</button></a>
     <a href="/cal"><button class="{{ 'selected' if active_page == 'calendar' else '' }}">Calendar</button></a>
+    <a href="/photos"><button class="{{ 'selected' if active_page == 'photos' else '' }}">Photos</button></a>
   </div>
   <button class="xclosebtn" id="xclosebtn" onclick="returntoindex()">
     <img id="xcloseicon" src="/static/resources/close.png">

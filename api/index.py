@@ -38,16 +38,13 @@ def calendar():
 def calendar_ical():
     return redirect("https://calendar.google.com/calendar/ical/troop14boyscouts%40gmail.com/public/basic.ics")
 
+import json
 @app.route('/photos')
 def photos():
-    import os
-    photos_list = os.listdir('static/resources/photos')
     photos = []
-    i = 1
-    for photo in photos_list:
-        photos.append({"id": i, "url": f"/static/resources/photos/{photo}"})
-        i += 1
-    photos.sort()
+    with open('photos.json', 'r') as f:
+        photos = json.load(f)
+    print(photos)
     return render_template('photos.html', active_page='photos', photos=photos)
 
 @app.errorhandler(404)
