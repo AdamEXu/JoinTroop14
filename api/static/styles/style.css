@@ -11,7 +11,7 @@ body {
 }
 
 body p {
-  font-size: calc(1vw + 10px);
+  font-size: calc(0.5vw + 12px);
   text-align: center;
   margin: 12px;
 }
@@ -68,7 +68,7 @@ nav {
   z-index: 69;
   /* height: 56px; */
   /* height: calc(1vw + 48px); */
-  height: calc(1.25vw + 48px);
+  height: calc(0.5vw + 32px);
   top: 0;
 }
 
@@ -81,7 +81,7 @@ join14 {
   position: fixed;
   width: calc(100% - 40px);
   z-index: 69;
-  top: calc(1.25vw + 88px);
+  top: calc(0.5vw + 72px);
 }
 
 join14.darkmode {
@@ -131,17 +131,17 @@ nav h1 {
 
 nav a {
   color: #000000;
-  font-size: calc(1.25vw + 16px);
+  font-size: calc(0.5vw + 22px);
   cursor: pointer;
 }
 
 body h1 {
   text-align: center;
-  font-size: calc(2.5vw + 32px);
+  font-size: calc(2vw + 18px);
 }
 
-h2 {
-  font-size: calc(1.5vw + 24px);
+body h2 {
+  font-size: calc(1.5vw + 12px);
   text-align: center;
   margin-top: 14px;
 }
