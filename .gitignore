@@ -1,5 +1,6 @@
 # Temporary files
 _temp/
+*/.DS_Store
 
 # Databases
 *.db

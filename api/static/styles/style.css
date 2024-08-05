@@ -425,12 +425,12 @@ nav.darkmode {
 }
 
 .bannercontent h1 {
-  font-size: calc(5vw + 12px);
+  font-size: calc(3vw + 12px);
   font-weight: 1000;
 }
 
 .bannercontent p {
-  font-size: calc(2vw + 12px);
+  font-size: calc(1.25vw + 12px);
   font-weight: 600;
 }
 

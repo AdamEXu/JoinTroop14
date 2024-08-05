@@ -13,31 +13,19 @@ import json
 ]
 """
 
-# first, convert them all to jpg
-for category in os.listdir('static/resources/photos'):
-  if category.endswith('.DS_Store'):
-    continue
-  else:
-    for photo in os.listdir(f'static/resources/photos/{category}'):
-      if photo.endswith('.jpg'):
-        continue
-      elif photo.endswith('.DS_Store'):
-        continue
-      else:
-        print(photo)
-        os.system(f"convert static/resources/photos/{category}/{photo} static/resources/photos/{category}/{photo.split('.')[0]}.jpg")
-        rm = f"rm static/resources/photos/{category}/{photo}"
-
+# get from photos.txt and output in json format
+category = ""
 photos = []
-for category in os.listdir('static/resources/photos'):
-  if category.endswith('.DS_Store'):
-    continue
-  for photo in os.listdir(f'static/resources/photos/{category}'):
-    if photo.endswith('.DS_Store'):
-      continue
-    if photo.endswith('.jpg'):
-      photos.append({
-          "url": f"/static/resources/photos/{category}/{photo}",
-          "alt": category
-      })
+with open('photos.txt', 'r') as f:
+  photos_list = f.readlines()
+
+for line in photos_list:
+  if line.strip().startswith("http"):
+    photos.append({
+      "url": line.strip(),
+      "alt": category
+    })
+  elif line.strip() != "":
+    category = line.strip()
+
 print(json.dumps(photos))

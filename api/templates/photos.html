@@ -2,40 +2,17 @@
 {% block content %}
 
 <style>
+
   .gallery-cell img {
-    height: calc(100vh - 300px);
+    height: calc(100vh - 120px);
     width: auto;
   }
-
-  .carousel-cell img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    opacity: 0.7;
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
-            transition: opacity 0.3s, transform 0.3s, filter 0.3s;
-  }
-
-  /* brighten selected image */
-  .carousel-cell.is-selected img {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-filter: none;
-            filter: none;
-  }
 </style>
-
 <h1>Photos</h1>
 <p>Here is a selection of photos from our various outings.</p>
 <p><b>Due to the number of images, this page may take a while to load.</b></p>
 <p>Computer: use arrow keys or the arrow buttons on the left/right side of the screen to navigate. Mobile: swipe to navigate. There are buttons at the bottom of the page to quickly navigate through images.</p>
-
-<div class="main-gallery">
+<div class="main-gallery" tabindex=0>
   {% for photo in photos %}
   <div class="gallery-cell">
     <img src="{{ photo.url }}" alt="{{ photo.alt }}">
